@@ -10,11 +10,9 @@ public:
 
                 int boxIndex = (i / 3) * 3 + (j / 3);
 
-                // Check if the number already exists in the row, column, or box
                 if (rows[i].count(num) || cols[j].count(num) || boxes[boxIndex].count(num))
                     return false;
 
-                // Insert into respective sets
                 rows[i].insert(num);
                 cols[j].insert(num);
                 boxes[boxIndex].insert(num);
